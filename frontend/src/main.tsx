@@ -8,3 +8,5 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <App />
   </React.StrictMode>
 )
+
+/*.render manda renderizar a aplicação na tela do navegador - faz isso conversando com o doc html*/
