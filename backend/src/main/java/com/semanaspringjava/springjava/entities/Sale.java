@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/*anotation - código especial que se coloca perto de uma classe, 
+/*notation - código especial que se coloca perto de uma classe, 
 um atributo, um elemento de uma classe, 
 para que seja feito um pré processamento na hora de compilar o projeto e gerar o programa executável
 preparação do código para que seja equivalente à uma tabela do banco*/
