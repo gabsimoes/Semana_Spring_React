@@ -24,11 +24,16 @@ function SalesCard() {
   e também executa esse algo quando algum dado informado, alterar. é possível controlar isso, com execução de função
   useEffect((função) => {corpo da função}, [lista de dependências])*/
   useEffect(() => {
-    axios.get(`${BASE_URL}/sales`)
+
+    /*convertendo e recortando para a impressão correta da data*/ 
+    const dmin = minDate.toISOString().slice(0, 10);
+    const dmax = maxDate.toISOString().slice(0, 10);
+
+    axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
       .then(response => {
         setSales(response.data.content);
       });
-  }, []); /*vendas voltando do backend*/
+  }, [minDate, maxDate]); /*vendas voltando do backend*/
 
 
   return (
